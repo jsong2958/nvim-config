@@ -4,7 +4,7 @@
 for i = 1, 9 do
   local lhs
   if vim.fn.has("mac") == 1 then
-    lhs = "\x1b[" .. (48 + i) .. ";9u" -- matches the escape codes above
+    lhs = "<D-" .. i .. ">" -- matches the escape codes above
   else
     lhs = "<C-" .. i .. ">"
   end
